@@ -5,4 +5,4 @@ A tic-tac-toe game in C that can allow player vs player games and player vs comp
 Place all files in the same directory. To run, ensure you are in the directory and enter "mingw32-make" into the terminal. You will need to have mingw32-make installed. I followed a YouTube tutorial for setting up my VSCode environment for programming in C:
 "How to Set up Visual Studio Code for C and C++ Programming" by Code Bear
 
-A fun first project using C!
+A fun first project using C! :D
