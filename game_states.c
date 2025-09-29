@@ -4,8 +4,7 @@
 
 // Function to check if there is a winner. Returns 1 if there is a winner, 0 otherwise.
 int isThereWinner(char board[3][3]){
-    int i;
-    for (i=0; i<3; i++){
+    for (int i=0; i<3; i++){
         // checking rows
         if (board[i][0] == board[i][1] && board[i][1] == board[i][2] && board[i][0] != EMPTY){
             return 1;
@@ -30,8 +29,7 @@ int isThereDraw(char board[3][3]){
     if (isThereWinner(board)){
         return 0;
     }
-    int i;
-    for (i=0; i<3; i++){
+    for (int i=0; i<3; i++){
         int j;
         for (j=0; j<3; j++){
             if (board[i][j] == EMPTY){

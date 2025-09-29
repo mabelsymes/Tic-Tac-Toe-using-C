@@ -6,7 +6,7 @@ To run the game on Windows:
 1. Place all files in the same directory.
 2. Ensure you have a C compiler such as MinGW (the one I used) installed.
 3. Enter the directory where the files are and enter `mingw64-make` (adapting the number for the version of MinGW that you have) into the terminal.
-4. After compilation has finished, type `.\tic_tac_toe` into the terminal. This should run the program with the starting prompt: "Do you want to play with a person or the computer? Enter 'p' for person and 'c' for computer."
+4. After compilation has finished, type `./tic_tac_toe` into the terminal. This should run the program with the starting prompt: "Do you want to play with a person or the computer? Enter 'p' for person and 'c' for computer."
 5. Enjoy the game!
 
 

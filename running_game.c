@@ -29,6 +29,7 @@ int isPositionValid(char board[3][3], int row, int col){
 
 // Function to display the end game information. 
 void displayEndGameInformation(char board[3][3], int playerNumber){
+
     displayBoard(board);
 
     printf("Game over!\n");
@@ -77,10 +78,8 @@ void executeComputerPlayerTurn(char board[3][3], int *pCurrentPlayerNumber){
 // Function to play a player vs player game.
 void doPlayerVsPlayerGame(){
     char board[3][3];
-    int i;
-    for (i=0; i<3; i++){
-        int j;
-        for (j=0; j<3; j++){
+    for (int i=0; i<3; i++){
+        for (int j=0; j<3; j++){
             board[i][j] = EMPTY;
         }
     }
@@ -95,10 +94,8 @@ void doPlayerVsPlayerGame(){
 // Function to play a player vs computer game.
 void doPlayerVsComputerGame(){
     char board[3][3];
-    int i;
-    for (i=0; i<3; i++){
-        int j;
-        for (j=0; j<3; j++){
+    for (int i=0; i<3; i++){
+        for (int j=0; j<3; j++){
             board[i][j] = EMPTY;
         }
     }
