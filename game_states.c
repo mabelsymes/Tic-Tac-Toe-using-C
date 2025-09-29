@@ -27,6 +27,9 @@ int isThereWinner(char board[3][3]){
 
 // Function to check if there is a draw. Returns 1 if there is a draw, 0 otherwise.
 int isThereDraw(char board[3][3]){
+    if (isThereWinner(board)){
+        return 0;
+    }
     int i;
     for (i=0; i<3; i++){
         int j;

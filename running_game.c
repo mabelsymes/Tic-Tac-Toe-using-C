@@ -35,7 +35,7 @@ void displayEndGameInformation(char board[3][3], int playerNumber){
     if (isThereWinner(board)){
         printf("We have a winner! Well done to player %d\n", !playerNumber + 1);
     }
-    if (isThereDraw(board)){
+    else if (isThereDraw(board)){
         printf("It's a draw! Well played both players\n");
     }
 }
