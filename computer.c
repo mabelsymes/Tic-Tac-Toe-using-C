@@ -21,10 +21,8 @@ int minimax(char board[3][3], int depth, int currentPlayerNumber, int originalPl
 
     if (currentPlayerNumber == originalPlayerNumber){
         int best_score = -1000;
-        int i;
-        for (i=0; i<3; i++){
-            int j;
-            for (j=0; j<3; j++){
+        for (int i=0; i<3; i++){
+            for (int j=0; j<3; j++){
                 if (board[i][j] == EMPTY){
                     board[i][j] = markToPlace;   
                     int score = minimax(board, depth + 1, NewPlayerNumber, originalPlayerNumber);
@@ -39,10 +37,8 @@ int minimax(char board[3][3], int depth, int currentPlayerNumber, int originalPl
     }
     else{
         int best_score = 1000;
-        int i;
-        for (i=0; i<3; i++){
-            int j;
-            for (j=0; j<3; j++){
+        for (int i=0; i<3; i++){
+            for (int j=0; j<3; j++){
                 if (board[i][j] == EMPTY){
                     board[i][j] = markToPlace;
                     int score = minimax(board, depth + 1, NewPlayerNumber, originalPlayerNumber);
@@ -61,12 +57,10 @@ int minimax(char board[3][3], int depth, int currentPlayerNumber, int originalPl
 Position getBestMove(char board[3][3], int currentPlayerNumber){
     int originalPlayerNumber = currentPlayerNumber;
     int best_score = -1000;
-    Position best_move = {-1,1};
+    Position best_move = {-1,-1};
 
-    int i;
-    for (i=0; i<3; i++){
-        int j;
-        for (j=0; j<3; j++){
+    for (int i=0; i<3; i++){
+        for (int j=0; j<3; j++){
             if (board[i][j] == EMPTY){
                 board[i][j] = getMark(currentPlayerNumber);
                 int score = minimax(board, 0, !currentPlayerNumber, originalPlayerNumber);
