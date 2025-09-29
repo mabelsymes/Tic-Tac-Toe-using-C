@@ -49,11 +49,17 @@ void executePlayerTurn(char board[3][3], int *pCurrentPlayerNumber){
     printf("It is player %d's turn\n\n", *pCurrentPlayerNumber + 1);
 
     do {
-        do{printf("Enter the row you want to place your mark at: ");
-        result = scanf("%d", &row);} while (result != 1 || row < 0 || row > 2);
+        
+        do {printf("Enter the row you want to place your mark at: ");
+        result = scanf("%d", &row);
+        clearInputBuffer();
+        } while (result != 1 || row < 0 || row > 2);
 
-        do{printf("Enter the column you want to place your mark at: ");
-        result = scanf("%d", &col);} while (result != 1 || col < 0 || col > 2);
+        do {printf("Enter the column you want to place your mark at: ");
+        result = scanf("%d", &col);
+        clearInputBuffer();
+        } while (result != 1 || col < 0 || col > 2);
+
     } while (!isPositionValid(board, row, col));
 
     char mark = getMark(*pCurrentPlayerNumber);
